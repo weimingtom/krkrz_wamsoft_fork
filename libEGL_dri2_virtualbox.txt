@@ -1,0 +1,24 @@
+https://70vps.net/virtual_ubuntu-803.html
+
+トラブル対応
+認証に失敗
+グラフを作成しているとき
+libEGL warning: DRI2: failed to authenticate
+認証に失敗
+のような警告が出るときがあります。
+どうも Keras を使用するとでるようです。
+このような時は、
+3D アクセラレーションを ON
+にしてみてください。
+
+認証失敗対処方法
+具体的対処方法の詳細を説明します。
+Oracle VM VirtualBox マネジャ－を立ち上げます。
+このとき Ubuntu は起動しないでください。
+
+Oracle VM VirtualBox マネジャ－
+
+設定⇒ディスプレイ
+と進み
+アクセラレーション: □ 3Dアクセラレーションを有効化
+にチェックを入れます。
