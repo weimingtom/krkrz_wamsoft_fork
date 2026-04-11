@@ -1,4 +1,4 @@
-*.hlsl
+#*.hlsl
 *.metal
 *.spv
 *.tmp.h
