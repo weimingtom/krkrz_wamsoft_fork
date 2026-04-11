@@ -12,9 +12,9 @@
 
 *.pdb
 *.obj
-*.lib
+#*.lib
 *.exp
-*.log
+#*.log
 *.tlog
 *.sdf
 *.suo
