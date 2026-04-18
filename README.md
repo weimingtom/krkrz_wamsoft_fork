@@ -6,6 +6,24 @@
 * https://github.com/wamsoft/krkrz/tree/59ef96b5c295617f3f6dac7d8e10a2066a75bfbe  
 * https://github.com/weimingtom/krkrsdl2-miyoo-a30  
 
+## How to build apk with Android ADT under Windows
+* cd android_adt/jni
+* Double click console.bat (modify the path %PATH% points to your Android NDK path in console.bat by yourself)  
+```
+::execute ndk-build
+
+::@set PATH=D:\android-ndk-r9c;%PATH%
+::@set PATH=D:\android-ndk-r10e;%PATH%
+@set PATH=D:\home\soft\android_studio_sdk\ndk\25.2.9519653;%PATH%
+@set NDK_MODULE_PATH=%CD%\..\..
+@cmd
+```
+* ndk-build clean
+* ndk-build -j8 (or ndk-build NDK_DEBUG=1 -j8, see adb_logcat_and_debug_crash.txt)
+* Get libkrkrz.so under android_adt/libs/arm64-v8a/libkrkrz.so
+* Use Android ADT to load android_adt/.project
+* Compile the apk file and install it to the Android device, **Now only support ARM64 Android device**   
+
 ## weibo record
 ```
 kirikiroid2 windowex研究。我试试运行krkr2和krkrz的windowex的测试例子，前者可以不编译，
