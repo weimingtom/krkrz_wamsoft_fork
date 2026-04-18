@@ -20,9 +20,20 @@
 ```
 * ndk-build clean
 * ndk-build -j8 (or ndk-build NDK_DEBUG=1 -j8, see adb_logcat_and_debug_crash.txt)
-* Get libkrkrz.so under android_adt/libs/arm64-v8a/libkrkrz.so
+* Get libkrkrz.so and libSDL3.so under android_adt/libs/arm64-v8a/libkrkrz.so and android_adt/libs/arm64-v8a/libSDL3.so
 * Use Android ADT to load android_adt/.project
 * Compile the apk file and install it to the Android device, **Now only support ARM64 Android device**   
+
+## (TODO, running **failed** in other linux and hardware) Ubuntu 25.04 on Xorg (choose when login) in VMware
+* sudo apt update
+* sudo apt install gedit lftp make gcc g++
+* sudo apt install libdbus-1-dev libudev-dev libx11-dev libgles-dev libwayland-dev libxkbcommon-dev libxext-dev libxcursor-dev libxi-dev libxrandr-dev libxss-dev libpulse-dev libasound2-dev
+* sudo apt install libonig-dev libglm-dev libfmt-dev libopusfile-dev libvorbis-dev libfreetype-dev libturbojpeg-dev libjpeg-dev
+* sudo apt install libgles2-mesa-dev libegl1-mesa-dev mesa-utils mesa-utils-extra
+* (Optional) sudo apt install libgl1-mesa-dri
+* make clean
+* make -j8
+* ./krkrz
 
 ## weibo record
 ```
