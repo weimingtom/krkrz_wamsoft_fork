@@ -31,6 +31,11 @@
 * sudo apt install libonig-dev libglm-dev libfmt-dev libopusfile-dev libvorbis-dev libfreetype-dev libturbojpeg-dev libjpeg-dev
 * sudo apt install libgles2-mesa-dev libegl1-mesa-dev mesa-utils mesa-utils-extra
 * (Optional) sudo apt install libgl1-mesa-dri
+* cd external/SDL3-f600c74
+* make clean
+* make -j8
+* make test
+* cd ../..
 * make clean
 * make -j8
 * ./krkrz
