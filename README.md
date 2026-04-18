@@ -3,6 +3,7 @@
 
 ## References:
 * https://github.com/wamsoft/krkrz
+* https://github.com/wamsoft/krkrz/tree/59ef96b5c295617f3f6dac7d8e10a2066a75bfbe  
 * https://github.com/weimingtom/krkrsdl2-miyoo-a30  
 
 # Original README
