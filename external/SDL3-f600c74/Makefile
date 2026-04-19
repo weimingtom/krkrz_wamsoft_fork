@@ -441,8 +441,24 @@ BIN := hello
 
 all : $(BIN)
 
+##/usr/bin/ld: /tmp/ccLESpMC.o: in function `quit':
+##/home/wmt/krkrz_wamsoft_fork/external/SDL3-f600c74/testgles2.c:115:(.text+0x133a): undefined reference to `SDLTest_CommonQuit'
+##/usr/bin/ld: /tmp/ccLESpMC.o: in function `loop_threaded':
+##/home/wmt/krkrz_wamsoft_fork/external/SDL3-f600c74/testgles2.c:630:(.text+0x2739): undefined reference to `SDLTest_CommonEvent'
+##/usr/bin/ld: /tmp/ccLESpMC.o: in function `loop':
+##/home/wmt/krkrz_wamsoft_fork/external/SDL3-f600c74/testgles2.c:644:(.text+0x27be): undefined reference to `SDLTest_CommonEvent'
+##/usr/bin/ld: /tmp/ccLESpMC.o: in function `main':
+##/home/wmt/krkrz_wamsoft_fork/external/SDL3-f600c74/testgles2.c:683:(.text+0x2923): undefined reference to `SDLTest_CommonCreateState'
+##/usr/bin/ld: /home/wmt/krkrz_wamsoft_fork/external/SDL3-f600c74/testgles2.c:690:(.text+0x2966): undefined reference to `SDLTest_CommonArg'
+##/usr/bin/ld: /home/wmt/krkrz_wamsoft_fork/external/SDL3-f600c74/testgles2.c:723:(.text+0x2bca): undefined reference to `SDLTest_CommonLogUsage'
+##/usr/bin/ld: /home/wmt/krkrz_wamsoft_fork/external/SDL3-f600c74/testgles2.c:746:(.text+0x2cdb): undefined reference to `SDLTest_CommonInit'
+
+###SDL_test_memory_mod.c
+###SDL_test_font_mod.c
+###SDL_test_log_mod.c 
+
 $(BIN) : $(LIBS)
-	$(CC) $(CFLAGS) -o $@ hello.c $(LIBS) -lpthread -ldl -lm $(LDFLAGS)
+	$(CC) $(CFLAGS) -o $@ testgles2.c SDL_test_common_mod.c $(LIBS) -lpthread -ldl -lm $(LDFLAGS)
 	
 libSDL3.a : $(OBJECTS)
 	$(AR) $@ $(OBJECTS) 
