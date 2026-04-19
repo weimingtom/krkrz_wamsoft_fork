@@ -169,7 +169,11 @@ LDFLAGS += -lpng16
 LDFLAGS += -lopus
 LDFLAGS += -lopusfile
 #LDFLAGS += -lmovieplayer  
+
 LDFLAGS += -lSDL3 
+#require libSDL3.so and libSDL3.so.0
+##LDFLAGS += ./external/SDL3-f600c74/libSDL3.so
+
 #LDFLAGS += -lresources  
 LDFLAGS += -ldl  
 #LDFLAGS += -lbz2d.a  
@@ -407,13 +411,13 @@ krkrz.a : $(OBJS)
 #gedit sdl3/environ/stdapp.cpp, line 67
 # Please run with: ./krkrz <path>
 test:
-	./krkrz
+	LD_LIBRARY_PATH=./external/SDL3-f600c74 ./krkrz
 
 test2:
-	SDL_RENDER_DRIVER=opengles2 ./krkrz
+	LD_LIBRARY_PATH=./external/SDL3-f600c74 SDL_RENDER_DRIVER=opengles2 ./krkrz
 
 test3:
-	SDL_RENDER_DRIVER=software ./krkrz
+	LD_LIBRARY_PATH=./external/SDL3-f600c74 SDL_RENDER_DRIVER=software ./krkrz
 
 # Please run with: ./krkrz <path>
 #(gdb) catch throw

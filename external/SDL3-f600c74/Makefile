@@ -31,22 +31,18 @@ CFLAGS += -Iinclude-config-relwithdebinfo/build_config
 CFLAGS += -Iinclude 
 CFLAGS += -Isrc 
 ###FIXME:
-CFLAGS += -isystem ./wayland-generated-protocols 
-
-###FIXME:
-CFLAGS += -isystem /usr/include/dbus-1.0 
-CFLAGS += -isystem /usr/lib/x86_64-linux-gnu/dbus-1.0/include 
-
+###CFLAGS += -isystem ./wayland-generated-protocols 
+###CFLAGS += -isystem /usr/include/dbus-1.0 
+###CFLAGS += -isystem /usr/lib/x86_64-linux-gnu/dbus-1.0/include 
 #CFLAGS += -isystem /usr/include/blkid 
-
 #CFLAGS += -isystem /usr/include/libmount 
-
 ###ibus depends glib
 #CFLAGS += -isystem /usr/include/ibus-1.0 
 #CFLAGS += -isystem /usr/include/glib-2.0 
 #CFLAGS += -isystem /usr/lib/x86_64-linux-gnu/glib-2.0/include  
-
 ###CFLAGS += -include /home/wmt/SDL3/build/CMakeFiles/SDL3-shared.dir/cmake_pch.h 
+CFLAGS += -idirafter./src/video/khronos 
+CFLAGS += -isystem /usr/include/libdrm
 
 ###CFLAGS += -O2 -g 
 CFLAGS += -DNDEBUG 
@@ -63,8 +59,6 @@ CFLAGS += -Wshadow
 CFLAGS += -Wno-unused-local-typedefs 
 CFLAGS += -Wimplicit-fallthrough 
 CFLAGS += -Winvalid-pch 
-
-###CFLAGS += -idirafter./src/video/khronos 
 
 ####################
 
@@ -287,44 +281,51 @@ OBJECTS += src/video/x11/SDL_x11xtest.o
 OBJECTS += src/video/x11/edid-parse.o 
 OBJECTS += src/video/x11/xsettings-client.o 
 
-OBJECTS += src/video/wayland/SDL_waylandclipboard.o 
-OBJECTS += src/video/wayland/SDL_waylandcolor.o 
-OBJECTS += src/video/wayland/SDL_waylanddatamanager.o 
-OBJECTS += src/video/wayland/SDL_waylanddyn.o 
-OBJECTS += src/video/wayland/SDL_waylandevents.o 
-OBJECTS += src/video/wayland/SDL_waylandkeyboard.o 
-OBJECTS += src/video/wayland/SDL_waylandmessagebox.o 
-OBJECTS += src/video/wayland/SDL_waylandmouse.o 
-OBJECTS += src/video/wayland/SDL_waylandopengles.o 
-OBJECTS += src/video/wayland/SDL_waylandshmbuffer.o 
-OBJECTS += src/video/wayland/SDL_waylandvideo.o 
-OBJECTS += src/video/wayland/SDL_waylandvulkan.o 
-OBJECTS += src/video/wayland/SDL_waylandwindow.o 
+##OBJECTS += src/video/wayland/SDL_waylandclipboard.o 
+##OBJECTS += src/video/wayland/SDL_waylandcolor.o 
+##OBJECTS += src/video/wayland/SDL_waylanddatamanager.o 
+##OBJECTS += src/video/wayland/SDL_waylanddyn.o 
+##OBJECTS += src/video/wayland/SDL_waylandevents.o 
+##OBJECTS += src/video/wayland/SDL_waylandkeyboard.o 
+##OBJECTS += src/video/wayland/SDL_waylandmessagebox.o 
+##OBJECTS += src/video/wayland/SDL_waylandmouse.o 
+##OBJECTS += src/video/wayland/SDL_waylandopengles.o 
+##OBJECTS += src/video/wayland/SDL_waylandshmbuffer.o 
+##OBJECTS += src/video/wayland/SDL_waylandvideo.o 
+##OBJECTS += src/video/wayland/SDL_waylandvulkan.o 
+##OBJECTS += src/video/wayland/SDL_waylandwindow.o 
 
-OBJECTS += wayland-generated-protocols/alpha-modifier-v1-protocol.o 
-OBJECTS += wayland-generated-protocols/color-management-v1-protocol.o 
-OBJECTS += wayland-generated-protocols/cursor-shape-v1-protocol.o 
-OBJECTS += wayland-generated-protocols/fractional-scale-v1-protocol.o 
-OBJECTS += wayland-generated-protocols/frog-color-management-v1-protocol.o 
-OBJECTS += wayland-generated-protocols/idle-inhibit-unstable-v1-protocol.o 
-OBJECTS += wayland-generated-protocols/input-timestamps-unstable-v1-protocol.o 
-OBJECTS += wayland-generated-protocols/keyboard-shortcuts-inhibit-unstable-v1-protocol.o 
-OBJECTS += wayland-generated-protocols/pointer-constraints-unstable-v1-protocol.o 
-OBJECTS += wayland-generated-protocols/pointer-gestures-unstable-v1-protocol.o 
-OBJECTS += wayland-generated-protocols/pointer-warp-v1-protocol.o 
-OBJECTS += wayland-generated-protocols/primary-selection-unstable-v1-protocol.o 
-OBJECTS += wayland-generated-protocols/relative-pointer-unstable-v1-protocol.o 
-OBJECTS += wayland-generated-protocols/tablet-v2-protocol.o 
-OBJECTS += wayland-generated-protocols/text-input-unstable-v3-protocol.o 
-OBJECTS += wayland-generated-protocols/viewporter-protocol.o 
-OBJECTS += wayland-generated-protocols/wayland-protocol.o 
-OBJECTS += wayland-generated-protocols/xdg-activation-v1-protocol.o 
-OBJECTS += wayland-generated-protocols/xdg-decoration-unstable-v1-protocol.o 
-OBJECTS += wayland-generated-protocols/xdg-dialog-v1-protocol.o 
-OBJECTS += wayland-generated-protocols/xdg-foreign-unstable-v2-protocol.o 
-OBJECTS += wayland-generated-protocols/xdg-output-unstable-v1-protocol.o 
-OBJECTS += wayland-generated-protocols/xdg-shell-protocol.o 
-OBJECTS += wayland-generated-protocols/xdg-toplevel-icon-v1-protocol.o 
+##OBJECTS += wayland-generated-protocols/alpha-modifier-v1-protocol.o 
+##OBJECTS += wayland-generated-protocols/color-management-v1-protocol.o 
+##OBJECTS += wayland-generated-protocols/cursor-shape-v1-protocol.o 
+##OBJECTS += wayland-generated-protocols/fractional-scale-v1-protocol.o 
+##OBJECTS += wayland-generated-protocols/frog-color-management-v1-protocol.o 
+##OBJECTS += wayland-generated-protocols/idle-inhibit-unstable-v1-protocol.o 
+##OBJECTS += wayland-generated-protocols/input-timestamps-unstable-v1-protocol.o 
+##OBJECTS += wayland-generated-protocols/keyboard-shortcuts-inhibit-unstable-v1-protocol.o 
+##OBJECTS += wayland-generated-protocols/pointer-constraints-unstable-v1-protocol.o 
+##OBJECTS += wayland-generated-protocols/pointer-gestures-unstable-v1-protocol.o 
+##OBJECTS += wayland-generated-protocols/pointer-warp-v1-protocol.o 
+##OBJECTS += wayland-generated-protocols/primary-selection-unstable-v1-protocol.o 
+##OBJECTS += wayland-generated-protocols/relative-pointer-unstable-v1-protocol.o 
+##OBJECTS += wayland-generated-protocols/tablet-v2-protocol.o 
+##OBJECTS += wayland-generated-protocols/text-input-unstable-v3-protocol.o 
+##OBJECTS += wayland-generated-protocols/viewporter-protocol.o 
+##OBJECTS += wayland-generated-protocols/wayland-protocol.o 
+##OBJECTS += wayland-generated-protocols/xdg-activation-v1-protocol.o 
+##OBJECTS += wayland-generated-protocols/xdg-decoration-unstable-v1-protocol.o 
+##OBJECTS += wayland-generated-protocols/xdg-dialog-v1-protocol.o 
+##OBJECTS += wayland-generated-protocols/xdg-foreign-unstable-v2-protocol.o 
+##OBJECTS += wayland-generated-protocols/xdg-output-unstable-v1-protocol.o 
+##OBJECTS += wayland-generated-protocols/xdg-shell-protocol.o 
+##OBJECTS += wayland-generated-protocols/xdg-toplevel-icon-v1-protocol.o 
+
+OBJECTS += src/video/kmsdrm/SDL_kmsdrmdyn.o 
+OBJECTS += src/video/kmsdrm/SDL_kmsdrmevents.o 
+OBJECTS += src/video/kmsdrm/SDL_kmsdrmmouse.o 
+OBJECTS += src/video/kmsdrm/SDL_kmsdrmopengles.o 
+OBJECTS += src/video/kmsdrm/SDL_kmsdrmvideo.o 
+OBJECTS += src/video/kmsdrm/SDL_kmsdrmvulkan.o 
 
 ####################
 
@@ -336,13 +337,16 @@ OBJECTS += src/core/unix/SDL_libthai.o
 OBJECTS += src/core/unix/SDL_poll.o 
 OBJECTS += src/camera/v4l2/SDL_camera_v4l2.o 
 OBJECTS += src/haptic/linux/SDL_syshaptic.o 
-OBJECTS += src/core/linux/SDL_dbus.o 
-OBJECTS += src/core/linux/SDL_system_theme.o 
-OBJECTS += src/core/linux/SDL_progressbar.o 
-OBJECTS += src/core/linux/SDL_ime.o 
-OBJECTS += src/core/linux/SDL_ibus.o 
-OBJECTS += src/core/linux/SDL_fcitx.o 
-OBJECTS += src/core/linux/SDL_udev.o 
+
+#IME
+###OBJECTS += src/core/linux/SDL_dbus.o 
+###OBJECTS += src/core/linux/SDL_system_theme.o 
+###OBJECTS += src/core/linux/SDL_progressbar.o 
+###OBJECTS += src/core/linux/SDL_ime.o 
+###OBJECTS += src/core/linux/SDL_ibus.o 
+###OBJECTS += src/core/linux/SDL_fcitx.o 
+###OBJECTS += src/core/linux/SDL_udev.o 
+
 OBJECTS += src/core/linux/SDL_evdev.o 
 OBJECTS += src/core/linux/SDL_evdev_kbd.o 
 OBJECTS += src/core/linux/SDL_evdev_capabilities.o 
