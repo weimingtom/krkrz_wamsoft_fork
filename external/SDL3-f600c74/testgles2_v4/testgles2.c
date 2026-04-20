@@ -2,8 +2,11 @@
 
 #include <SDL3/SDL_test_common.h>
 #include <SDL3/SDL_main.h>
-#include <SDL3/SDL_opengles2.h>
+#ifdef SDL_PLATFORM_EMSCRIPTEN
+#include <emscripten/emscripten.h>
+#endif
 #include <stdlib.h>
+#include <SDL3/SDL_opengles2.h>
 
 typedef struct GLES2_Context
 {
@@ -543,6 +546,11 @@ loop(void)
             render_window(i);
         }
     }
+#ifdef SDL_PLATFORM_EMSCRIPTEN
+    else {
+        emscripten_cancel_main_loop();
+    }
+#endif
 
     /* If all windows are occluded, throttle event polling to 15hz. */
     if (!g_done && !active_windows) {
@@ -744,9 +752,13 @@ int main(int argc, char *argv[])
     then = SDL_GetTicks();
     g_done = 0;
 
+#ifdef SDL_PLATFORM_EMSCRIPTEN
+    emscripten_set_main_loop(loop, 0, 1);
+#else
     while (!g_done) {
         loop();
     }
+#endif
 
     /* Print out some timing information */
     now = SDL_GetTicks();
@@ -754,7 +766,9 @@ int main(int argc, char *argv[])
         SDL_Log("%2.2f frames per second",
                 ((double)frames * 1000) / (now - then));
     }
+#ifndef SDL_PLATFORM_ANDROID
     quit(0);
+#endif
     return 0;
 }
 

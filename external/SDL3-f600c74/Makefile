@@ -456,9 +456,10 @@ all : $(BIN)
 ###SDL_test_memory_mod.c
 ###SDL_test_font_mod.c
 ###SDL_test_log_mod.c 
+###SDL_test_common_mod.c 
 
 $(BIN) : $(LIBS)
-	$(CC) $(CFLAGS) -o $@ testgles2.c SDL_test_common_mod.c $(LIBS) -lpthread -ldl -lm $(LDFLAGS)
+	$(CC) $(CFLAGS) -o $@ testgles2.c $(LIBS) -lpthread -ldl -lm $(LDFLAGS)
 	
 libSDL3.a : $(OBJECTS)
 	$(AR) $@ $(OBJECTS) 
