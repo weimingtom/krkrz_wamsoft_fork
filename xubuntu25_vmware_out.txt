@@ -1,0 +1,427 @@
+LD_LIBRARY_PATH=./external/SDL3-f600c74 ./krkrz
+TVP Log system initialized with level: 1
+SDL chose user_storage backend 'generic'
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/startup.tjs
+[stdapp.cpp:InitPath:81] file://./data/startup.tjs found, using data/ as project path
+[stdapp.cpp:InitPath:108] basePath: /home/wmt/krkrz_wamsoft_fork/
+[stdapp.cpp:InitPath:109] appPath: /home/wmt/krkrz_wamsoft_fork/
+ERROR: [stdapp.cpp:InitPath:110] projectPath: file://./data/
+Audio stream created with channels: 2, sample rate: 48000
+[MiniAudioEngine.cpp:InitMiniAudio:65] Initializing miniaudio engine...
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: resource/messages.json
+[StorageIntf.cpp:_TVPCreateStream:1589] _TVPCreateStream: file://./resource/messages.json ext:.json
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:file://./resource/messages.json, result:not null
+WARNING: Generic (Generic) 上で実行が開始されました
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: resource/config.cf
+[StorageIntf.cpp:_TVPCreateStream:1589] _TVPCreateStream: file://./resource/config.cf ext:.cf
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:file://./resource/config.cf, result:not null
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: /home/wmt/krkrz_wamsoft_fork/config.cf
+WARNING: (info) Loading configuration file &quot;&quot;/home/wmt/krkrz_wamsoft_fork/config.cf&quot;&quot; failed (ignoring) : file not found.
+WARNING: (info) Data path : user://./
+WARNING: (info) Total physical memory : 0
+WARNING: (info) Selected project directory : file://./data/
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: resource/SysInitScript.tjs
+[StorageIntf.cpp:_TVPCreateStream:1589] _TVPCreateStream: file://./resource/SysInitScript.tjs ext:.tjs
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:file://./resource/SysInitScript.tjs, result:not null
+WARNING: 吉里吉里[きりきり] Z 実行コア/1.0.0.1 (Compiled on Apr 22 2026 01:30:56) TJS2/2.4.28 Copyright (C) 1997-2013 W.Dee and contributors All rights reserved.
+WARNING: バージョン情報の詳細は -about を付けて起動すると閲覧できます
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: resource/roboto-regular.ttf
+[StorageCache.cpp:EntryStorageCache:164] StorageCache:entry:file://./resource/roboto-regular.ttf
+[StorageCache.cpp:TVPGetStorageCache:210] StorageCache:get:file://./resource/roboto-regular.ttf
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: resource/notosansjp-regular.otf
+[StorageCache.cpp:EntryStorageCache:164] StorageCache:entry:file://./resource/notosansjp-regular.otf
+[StorageCache.cpp:TVPGetStorageCache:210] StorageCache:get:file://./resource/notosansjp-regular.otf
+[FileImpl.cpp:ExistentFolder:144] Checking if folder exists: user://./
+[FileImpl.cpp:ExistentFolder:144] Checking if folder exists: user://.
+[FileImpl.cpp:ExistentFolder:144] Checking if folder exists: user://
+[FileImpl.cpp:MakeDirectory:115] Creating directory: user://.
+WARNING: (info) Data path does not exist, trying to make it ... 失敗。
+WARNING: (info) Specified option(s) (earlier item has more priority) : -padinterval=70
+(info) 起動スクリプト読込み中 : startup.tjs
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/startup.tjs
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/startup.tjs
+[StorageIntf.cpp:_TVPCreateStream:1589] _TVPCreateStream: file://./data/startup.tjs ext:.tjs
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:file://./data/startup.tjs, result:not null
+[StorageIntf.cpp:_TVPCreateStream:1589] _TVPCreateStream: file://./data/startup.tjs ext:.tjs
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:file://./data/startup.tjs, result:not null
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/system_polyfill/PolyfillInitialize.tjs
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/system_polyfill/PolyfillInitialize.tjs
+[StorageIntf.cpp:_TVPCreateStream:1589] _TVPCreateStream: file://./data/system_polyfill/PolyfillInitialize.tjs ext:.tjs
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:file://./data/system_polyfill/PolyfillInitialize.tjs, result:not null
+[StorageIntf.cpp:_TVPCreateStream:1589] _TVPCreateStream: file://./data/system_polyfill/PolyfillInitialize.tjs ext:.tjs
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:file://./data/system_polyfill/PolyfillInitialize.tjs, result:not null
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: /home/wmt/krkrz_wamsoft_fork/plugin/libmenu.so
+==== An exception occured at PolyfillInitialize.tjs(22)[(top level script) global], VM ip = 86 ====
+-- Disassembled VM code --
+#(22) 			global.Plugins.link("menu.dll");
+00000077 const %1, *10	// *10 = (string)"menu.dll"
+00000080 global %2
+00000082 gpd %3, %2.*11	// *11 = (string)"Plugins"
+00000086 calld %0, %3.*12(%1)	// *12 = (string)"link"
+-- Register dump --
+%-6=(object)(object 0x5925edab9d20:0x5925edab9d20)  %-5=(string)"type"  %-4=(int)28  %-3=(void)
+%-2=(object)(object 0x7ffffbde6a30:0x0)  %-1=(object)(object 0x5925eda41230:0x5925eda41230)
+%0=(void)  %1=(string)"menu.dll"  %2=(object)(object 0x5925eda41230:0x0)
+%3=(object)(object 0x5925eda469a0:0x0)  %4=(void)  %5=(void)  %6=(void)  %7=(void)  %8=(void)
+---------------------------------------------------------------------------------------------------
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/system_polyfill/MenuItem_stub.tjs
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/system_polyfill/MenuItem_stub.tjs
+[StorageIntf.cpp:_TVPCreateStream:1589] _TVPCreateStream: file://./data/system_polyfill/MenuItem_stub.tjs ext:.tjs
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:file://./data/system_polyfill/MenuItem_stub.tjs, result:not null
+[StorageIntf.cpp:_TVPCreateStream:1589] _TVPCreateStream: file://./data/system_polyfill/MenuItem_stub.tjs ext:.tjs
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:file://./data/system_polyfill/MenuItem_stub.tjs, result:not null
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: /home/wmt/krkrz_wamsoft_fork/plugin/libkagparser.so
+==== An exception occured at PolyfillInitialize.tjs(40)[(top level script) global], VM ip = 162 ====
+-- Disassembled VM code --
+#(40) 			global.Plugins.link("KAGParser.dll");
+00000153 const %1, *17	// *17 = (string)"KAGParser.dll"
+00000156 global %2
+00000158 gpd %3, %2.*11	// *11 = (string)"Plugins"
+00000162 calld %0, %3.*12(%1)	// *12 = (string)"link"
+-- Register dump --
+%-6=(object)(object 0x5925edab9d20:0x5925edab9d20)  %-5=(string)"type"  %-4=(int)28
+%-3=(object)(object 0x5925edad0150:0x5925edad0150)  %-2=(object)(object 0x7ffffbde6a30:0x0)
+%-1=(object)(object 0x5925eda41230:0x5925eda41230)  %0=(void)  %1=(string)"KAGParser.dll"
+%2=(object)(object 0x5925eda41230:0x0)  %3=(object)(object 0x5925eda469a0:0x0)
+%4=(object)(object 0x5925eda41230:0x0)  %5=(object)(object 0x5925eda29410:0x0)  %6=(void)  %7=(void)
+%8=(void)
+----------------------------------------------------------------------------------------------------
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/system_polyfill/KAGParser.tjs
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/system_polyfill/KAGParser.tjs
+[StorageIntf.cpp:_TVPCreateStream:1589] _TVPCreateStream: file://./data/system_polyfill/KAGParser.tjs ext:.tjs
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:file://./data/system_polyfill/KAGParser.tjs, result:not null
+[StorageIntf.cpp:_TVPCreateStream:1589] _TVPCreateStream: file://./data/system_polyfill/KAGParser.tjs ext:.tjs
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:file://./data/system_polyfill/KAGParser.tjs, result:not null
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/system_polyfill/font.ttf
+[StorageCache.cpp:EntryStorageCache:164] StorageCache:entry:file://./data/system_polyfill/font.ttf
+[StorageCache.cpp:TVPGetStorageCache:210] StorageCache:get:file://./data/system_polyfill/font.ttf
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/system/Initialize.tjs
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/system/Initialize.tjs
+[StorageIntf.cpp:_TVPCreateStream:1589] _TVPCreateStream: file://./data/system/Initialize.tjs ext:.tjs
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:file://./data/system/Initialize.tjs, result:not null
+[StorageIntf.cpp:_TVPCreateStream:1589] _TVPCreateStream: file://./data/system/Initialize.tjs ext:.tjs
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:file://./data/system/Initialize.tjs, result:not null
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: home/wmt/krkrz_wamsoft_fork/video.xp3
+(info) 自動検索パステーブルを再構築しています ...
+(info) Total 37 file(s) found, 30 file(s) activated. (0ms)
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: home/wmt/krkrz_wamsoft_fork/others.xp3
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: home/wmt/krkrz_wamsoft_fork/rule.xp3
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: home/wmt/krkrz_wamsoft_fork/sound.xp3
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: home/wmt/krkrz_wamsoft_fork/bgm.xp3
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: home/wmt/krkrz_wamsoft_fork/fgimage.xp3
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: home/wmt/krkrz_wamsoft_fork/bgimage.xp3
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: home/wmt/krkrz_wamsoft_fork/scenario.xp3
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: home/wmt/krkrz_wamsoft_fork/image.xp3
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: home/wmt/krkrz_wamsoft_fork/system.xp3
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: home/wmt/krkrz_wamsoft_fork/patch.xp3
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: home/wmt/krkrz_wamsoft_fork/patch2.xp3
+WARNING: OS : Generic (Generic)
+WARNING: KAG : 3.32 stable rev. 2
+WARNING: Kirikiri : 1.0.0.1
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/Config.tjs
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/system/Config.tjs
+[StorageIntf.cpp:_TVPCreateStream:1589] _TVPCreateStream: file://./data/system/Config.tjs ext:.tjs
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:file://./data/system/Config.tjs, result:not null
+[StorageIntf.cpp:_TVPCreateStream:1589] _TVPCreateStream: file://./data/system/Config.tjs ext:.tjs
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:file://./data/system/Config.tjs, result:not null
+Config.tjs を読み込みました(1ms)
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/UpdateConfig.tjs
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/system/UpdateConfig.tjs
+[StorageIntf.cpp:_TVPCreateStream:1589] _TVPCreateStream: file://./data/system/UpdateConfig.tjs ext:.tjs
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:file://./data/system/UpdateConfig.tjs, result:not null
+[StorageIntf.cpp:_TVPCreateStream:1589] _TVPCreateStream: file://./data/system/UpdateConfig.tjs ext:.tjs
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:file://./data/system/UpdateConfig.tjs, result:not null
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/Config.~new
+UpdateConfig.tjs を読み込みました(1ms)
+KAG System スクリプトを読み込んでいます...
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/Utils.tjs
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/system/Utils.tjs
+[StorageIntf.cpp:_TVPCreateStream:1589] _TVPCreateStream: file://./data/system/Utils.tjs ext:.tjs
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:file://./data/system/Utils.tjs, result:not null
+[StorageIntf.cpp:_TVPCreateStream:1589] _TVPCreateStream: file://./data/system/Utils.tjs ext:.tjs
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:file://./data/system/Utils.tjs, result:not null
+Utils.tjs を読み込みました(1ms)
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/KAGLayer.tjs
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/system/KAGLayer.tjs
+[StorageIntf.cpp:_TVPCreateStream:1589] _TVPCreateStream: file://./data/system/KAGLayer.tjs ext:.tjs
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:file://./data/system/KAGLayer.tjs, result:not null
+[StorageIntf.cpp:_TVPCreateStream:1589] _TVPCreateStream: file://./data/system/KAGLayer.tjs ext:.tjs
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:file://./data/system/KAGLayer.tjs, result:not null
+KAGLayer.tjs を読み込みました(3ms)
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/HistoryLayer.tjs
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/system/HistoryLayer.tjs
+[StorageIntf.cpp:_TVPCreateStream:1589] _TVPCreateStream: file://./data/system/HistoryLayer.tjs ext:.tjs
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:file://./data/system/HistoryLayer.tjs, result:not null
+[StorageIntf.cpp:_TVPCreateStream:1589] _TVPCreateStream: file://./data/system/HistoryLayer.tjs ext:.tjs
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:file://./data/system/HistoryLayer.tjs, result:not null
+HistoryLayer.tjs を読み込みました(7ms)
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/BGM.tjs
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/system/BGM.tjs
+[StorageIntf.cpp:_TVPCreateStream:1589] _TVPCreateStream: file://./data/system/BGM.tjs ext:.tjs
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:file://./data/system/BGM.tjs, result:not null
+[StorageIntf.cpp:_TVPCreateStream:1589] _TVPCreateStream: file://./data/system/BGM.tjs ext:.tjs
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:file://./data/system/BGM.tjs, result:not null
+BGM.tjs を読み込みました(3ms)
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/SE.tjs
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/system/SE.tjs
+[StorageIntf.cpp:_TVPCreateStream:1589] _TVPCreateStream: file://./data/system/SE.tjs ext:.tjs
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:file://./data/system/SE.tjs, result:not null
+[StorageIntf.cpp:_TVPCreateStream:1589] _TVPCreateStream: file://./data/system/SE.tjs ext:.tjs
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:file://./data/system/SE.tjs, result:not null
+SE.tjs を読み込みました(2ms)
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/Movie.tjs
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/system/Movie.tjs
+[StorageIntf.cpp:_TVPCreateStream:1589] _TVPCreateStream: file://./data/system/Movie.tjs ext:.tjs
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:file://./data/system/Movie.tjs, result:not null
+[StorageIntf.cpp:_TVPCreateStream:1589] _TVPCreateStream: file://./data/system/Movie.tjs ext:.tjs
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:file://./data/system/Movie.tjs, result:not null
+Movie.tjs を読み込みました(3ms)
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/Conductor.tjs
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/system/Conductor.tjs
+[StorageIntf.cpp:_TVPCreateStream:1589] _TVPCreateStream: file://./data/system/Conductor.tjs ext:.tjs
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:file://./data/system/Conductor.tjs, result:not null
+[StorageIntf.cpp:_TVPCreateStream:1589] _TVPCreateStream: file://./data/system/Conductor.tjs ext:.tjs
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:file://./data/system/Conductor.tjs, result:not null
+Conductor.tjs を読み込みました(3ms)
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/AnimationLayer.tjs
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/system/AnimationLayer.tjs
+[StorageIntf.cpp:_TVPCreateStream:1589] _TVPCreateStream: file://./data/system/AnimationLayer.tjs ext:.tjs
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:file://./data/system/AnimationLayer.tjs, result:not null
+[StorageIntf.cpp:_TVPCreateStream:1589] _TVPCreateStream: file://./data/system/AnimationLayer.tjs ext:.tjs
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:file://./data/system/AnimationLayer.tjs, result:not null
+AnimationLayer.tjs を読み込みました(6ms)
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/GraphicLayer.tjs
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/system/GraphicLayer.tjs
+[StorageIntf.cpp:_TVPCreateStream:1589] _TVPCreateStream: file://./data/system/GraphicLayer.tjs ext:.tjs
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:file://./data/system/GraphicLayer.tjs, result:not null
+[StorageIntf.cpp:_TVPCreateStream:1589] _TVPCreateStream: file://./data/system/GraphicLayer.tjs ext:.tjs
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:file://./data/system/GraphicLayer.tjs, result:not null
+GraphicLayer.tjs を読み込みました(3ms)
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/MessageLayer.tjs
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/system/MessageLayer.tjs
+[StorageIntf.cpp:_TVPCreateStream:1589] _TVPCreateStream: file://./data/system/MessageLayer.tjs ext:.tjs
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:file://./data/system/MessageLayer.tjs, result:not null
+[StorageIntf.cpp:_TVPCreateStream:1589] _TVPCreateStream: file://./data/system/MessageLayer.tjs ext:.tjs
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:file://./data/system/MessageLayer.tjs, result:not null
+MessageLayer.tjs を読み込みました(21ms)
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/Menus.tjs
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/system/Menus.tjs
+[StorageIntf.cpp:_TVPCreateStream:1589] _TVPCreateStream: file://./data/system/Menus.tjs ext:.tjs
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:file://./data/system/Menus.tjs, result:not null
+[StorageIntf.cpp:_TVPCreateStream:1589] _TVPCreateStream: file://./data/system/Menus.tjs ext:.tjs
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:file://./data/system/Menus.tjs, result:not null
+Menus.tjs を読み込みました(3ms)
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/DefaultMover.tjs
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/system/DefaultMover.tjs
+[StorageIntf.cpp:_TVPCreateStream:1589] _TVPCreateStream: file://./data/system/DefaultMover.tjs ext:.tjs
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:file://./data/system/DefaultMover.tjs, result:not null
+[StorageIntf.cpp:_TVPCreateStream:1589] _TVPCreateStream: file://./data/system/DefaultMover.tjs ext:.tjs
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:file://./data/system/DefaultMover.tjs, result:not null
+DefaultMover.tjs を読み込みました(3ms)
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/MainWindow.tjs
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/system/MainWindow.tjs
+[StorageIntf.cpp:_TVPCreateStream:1589] _TVPCreateStream: file://./data/system/MainWindow.tjs ext:.tjs
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:file://./data/system/MainWindow.tjs, result:not null
+[StorageIntf.cpp:_TVPCreateStream:1589] _TVPCreateStream: file://./data/system/MainWindow.tjs ext:.tjs
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:file://./data/system/MainWindow.tjs, result:not null
+MainWindow.tjs を読み込みました(36ms)
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/Override.tjs
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: home/wmt/krkrz_wamsoft_fork/Override2.tjs
+スクリプトの読み込みに 97ms かかりました
+ALSA lib pcm.c:8772:(snd_pcm_recover) underrun occurred
+(info) Use malloc for Bitmap
+[storage.cpp:Open:117] Opening storage file: datasc.ksd (access=0)
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:user://./datasc.ksd, result:not null
+[storage.cpp:Open:117] Opening storage file: datasc.ksd (access=0)
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:user://./datasc.ksd, result:not null
+[storage.cpp:Open:117] Opening storage file: datasu.ksd (access=0)
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:user://./datasu.ksd, result:not null
+[storage.cpp:Open:117] Opening storage file: datasu.ksd (access=0)
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:user://./datasu.ksd, result:not null
+[storage.cpp:Open:117] Opening storage file: datasc.ksd (access=1)
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:user://./datasc.ksd, result:not null
+[storage.cpp:Open:117] Opening storage file: datasu.ksd (access=1)
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:user://./datasu.ksd, result:not null
+[storage.cpp:Open:117] Opening storage file: datasc.ksd (access=1)
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:user://./datasc.ksd, result:not null
+[storage.cpp:Open:117] Opening storage file: datasu.ksd (access=1)
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:user://./datasu.ksd, result:not null
+[storage.cpp:Open:117] Opening storage file: datasc.ksd (access=1)
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:user://./datasc.ksd, result:not null
+[storage.cpp:Open:117] Opening storage file: datasu.ksd (access=1)
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:user://./datasu.ksd, result:not null
+KAGMainWindow のコンストラクタで 11316ms かかりました
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/AfterInit.tjs
+(info) 自動検索パステーブルを再構築しています ...
+(info) Total 37 file(s) found, 30 file(s) activated. (0ms)
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: home/wmt/krkrz_wamsoft_fork/AfterInit2.tjs
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/first.ks
+[StorageIntf.cpp:_TVPCreateStream:1589] _TVPCreateStream: file://./data/scenario/first.ks ext:.ks
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/scenario/first.ks
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:file://./data/scenario/first.ks, result:not null
+================================================================================
+Scenario loaded : first.ks
+処理を開始します
+(info) 起動スクリプト実行終了。
+first.ks : [wait time=200]
+SDL chose render backend 'opengl'
+[SDLDrawDevice.cpp:CreateTexture:101] tTVPSDLDrawDevice::CreateTexture() 640x480
+Window shown: 吉里吉里
+window show:No gamepads connected
+[form.cpp:AppEvent:285] Window resized: 640x480
+Window shown: 吉里吉里
+window show:No gamepads connected
+first.ks : ラベル/ページ : *start/スタート
+first.ks : [cm]
+first.ks : こんにちは。
+[form.cpp:AppEvent:278] Window close requested
+[storage.cpp:Open:117] Opening storage file: datasc.ksd (access=1)
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:user://./datasc.ksd, result:not null
+[storage.cpp:Open:117] Opening storage file: datasu.ksd (access=1)
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:user://./datasu.ksd, result:not null
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/YesNoDialog.tjs
+(info) 自動検索パステーブルを再構築しています ...
+(info) Total 37 file(s) found, 30 file(s) activated. (0ms)
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/system/YesNoDialog.tjs
+[StorageIntf.cpp:_TVPCreateStream:1589] _TVPCreateStream: file://./data/system/YesNoDialog.tjs ext:.tjs
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:file://./data/system/YesNoDialog.tjs, result:not null
+[StorageIntf.cpp:_TVPCreateStream:1589] _TVPCreateStream: file://./data/system/YesNoDialog.tjs ext:.tjs
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:file://./data/system/YesNoDialog.tjs, result:not null
+YesNoDialog.tjs を読み込みました(2ms)
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/ButtonLayer.tjs
+[FileImpl.cpp:ExistentFile:126] Checking if file exists: data/system/ButtonLayer.tjs
+[StorageIntf.cpp:_TVPCreateStream:1589] _TVPCreateStream: file://./data/system/ButtonLayer.tjs ext:.tjs
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:file://./data/system/ButtonLayer.tjs, result:not null
+[StorageIntf.cpp:_TVPCreateStream:1589] _TVPCreateStream: file://./data/system/ButtonLayer.tjs ext:.tjs
+[StorageIntf.cpp:_TVPCreateStream:1599] end _TVPCreateStream: name:file://./data/system/ButtonLayer.tjs, result:not null
+ButtonLayer.tjs を読み込みました(2ms)
+==== An exception occured at YesNoDialog.tjs(178)[(function) askYesNo], VM ip = 24 ====
+-- Disassembled VM code --
+#(178) 	win.showModal();
+00000024 calld %0, %-5.*2()	// *2 = (string)"showModal"
+-- Register dump --
+%-6=(void)  %-5=(object)(object 0x5925ef325570:0x5925ef325570)  %-4=(string)"確認"
+%-3=(string)"終了しますか？"  %-2=(object)(object 0x7ffffbde6390:0x0)
+%-1=(object)(object 0x5925eda41230:0x5925eda41230)  %0=(void)
+%1=(object)(object 0x5925ef325570:0x5925ef325570)
+%2=(object)(object 0x5925edacdbb0:0x0)
+---------------------------------------------------------------------------------------
+スクリプトで例外が発生しました
+Modal window is not supported.
+trace : MainWindow.tjs(526)[(function) onCloseQuery] <-- immediate event
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.244: Theme parser error: gtk.css:123:137-163: Expected a valid color.
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.244: Theme parser error: gtk.css:129:143-169: Expected a valid color.
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.244: Theme parser error: gtk.css:155:615-641: Expected a valid color.
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.244: Theme parser error: gtk.css:157:663-689: Expected a valid color.
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.244: Theme parser error: gtk.css:167:356-382: Expected a valid color.
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.245: Theme parser error: gtk.css:169:380-406: Expected a valid color.
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.245: Theme parser error: gtk.css:173:702-728: Expected a valid color.
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.245: Theme parser error: gtk.css:175:750-776: Expected a valid color.
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.245: Theme parser error: gtk.css:189:55-69: Not a valid image
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.245: Theme parser error: gtk.css:190:26-40: Not a valid image
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.245: Theme parser error: gtk.css:200:357-373: No property named "-gtk-icon-effect"
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.245: Theme parser error: gtk.css:204:589-605: No property named "-gtk-icon-effect"
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.247: Theme parser error: gtk.css:390:42-61: No property named "-gtk-outline-radius"
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.248: Theme parser error: gtk.css:430:814-833: No property named "-gtk-outline-radius"
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.248: Theme parser error: gtk.css:432:1242-1270: No property named "-gtk-outline-top-left-radius"
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.248: Theme parser error: gtk.css:432:1277-1308: No property named "-gtk-outline-bottom-left-radius"
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.248: Theme parser error: gtk.css:434:1237-1266: No property named "-gtk-outline-top-right-radius"
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.248: Theme parser error: gtk.css:434:1273-1305: No property named "-gtk-outline-bottom-right-radius"
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.248: Theme parser error: gtk.css:436:1410-1429: No property named "-gtk-outline-radius"
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.248: Theme parser error: gtk.css:438:391-410: No property named "-gtk-outline-radius"
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.248: Theme parser error: gtk.css:440:1014-1042: No property named "-gtk-outline-top-left-radius"
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.248: Theme parser error: gtk.css:440:1049-1078: No property named "-gtk-outline-top-right-radius"
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.248: Theme parser error: gtk.css:442:1044-1075: No property named "-gtk-outline-bottom-left-radius"
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.248: Theme parser error: gtk.css:442:1082-1114: No property named "-gtk-outline-bottom-right-radius"
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.249: Theme parser error: gtk.css:444:464-483: No property named "-gtk-outline-radius"
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.250: Theme parser error: gtk.css:577:64-90: No property named "-GtkWidget-window-dragging"
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.250: Theme parser error: gtk.css:641:610-626: No property named "-gtk-icon-effect"
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.252: Theme parser error: gtk.css:761:102-135: No property named "-GtkTreeView-horizontal-separator"
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.252: Theme parser error: gtk.css:761:140-168: No property named "-GtkTreeView-grid-line-width"
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.252: Theme parser error: gtk.css:761:173-203: No property named "-GtkTreeView-grid-line-pattern"
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.252: Theme parser error: gtk.css:761:209-237: No property named "-GtkTreeView-tree-line-width"
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.252: Theme parser error: gtk.css:761:242-272: No property named "-GtkTreeView-tree-line-pattern"
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.252: Theme parser error: gtk.css:761:278-304: No property named "-GtkTreeView-expander-size"
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.253: Theme parser error: gtk.css:838:21-47: No property named "-GtkWidget-window-dragging"
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.254: Theme parser error: gtk.css:1051:102-136: No property named "-GtkScrollbar-has-backward-stepper"
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.254: Theme parser error: gtk.css:1051:145-178: No property named "-GtkScrollbar-has-forward-stepper"
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.255: Theme parser error: gtk.css:1315:95-114: No property named "-gtk-outline-radius"
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.255: Theme parser error: gtk.css:1317:51-70: No property named "-gtk-outline-radius"
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.256: Theme parser error: gtk.css:1517:50-64: Not a valid image
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.256: Theme parser error: gtk.css:1519:59-73: Not a valid image
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.256: Theme parser error: gtk.css:1521:53-67: Not a valid image
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.256: Theme parser error: gtk.css:1523:62-76: Not a valid image
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.256: Theme parser error: gtk.css:1525:51-65: Not a valid image
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.256: Theme parser error: gtk.css:1527:60-74: Not a valid image
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.256: Theme parser error: gtk.css:1529:52-66: Not a valid image
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.256: Theme parser error: gtk.css:1531:61-75: Not a valid image
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.257: Theme parser error: gtk.css:1632:715-746: No property named "-gtk-outline-bottom-left-radius"
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.257: Theme parser error: gtk.css:1634:688-720: No property named "-gtk-outline-bottom-right-radius"
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.257: Theme parser error: gtk.css:1706:130-149: No property named "-gtk-outline-radius"
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.258: Theme parser error: gtk.css:1864:23-39: No property named "-gtk-icon-effect"
+
+(zenity:6753): Gtk-WARNING **: 01:32:22.259: Theme parser error: gtk.css:1934:42-61: No property named "-gtk-outline-radius"
+Leaked thread (0x5925edee0da0)
+Leaked thread (0x5925edee08c0)
+Leaked thread (0x5925edee1220)
+Leaked thread (0x5925edee13a0)
+Leaked thread (0x5925ee1a9660)
+Leaked thread (0x5925ee1aacc0)
+Leaked thread (0x5925ee1ac340)
+Leaked thread (0x5925eda2c3f0)
+Leaked thread (0x5925edab2fd0)
+Leaked thread (0x5925ededfeb0)
+Leaked thread (0x5925edee0130)
+terminate called after throwing an instance of 'TJS::eTJSScriptError'
+Aborted (core dumped)
+make: *** [Makefile:414: test] Error 134

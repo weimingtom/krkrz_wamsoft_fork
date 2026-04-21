@@ -5,6 +5,7 @@
 * https://github.com/wamsoft/krkrz
 * https://github.com/wamsoft/krkrz/tree/59ef96b5c295617f3f6dac7d8e10a2066a75bfbe  
 * https://github.com/weimingtom/krkrsdl2-miyoo-a30  
+* https://wiki.libsdl.org/SDL3/README-linux
 
 ## How to build apk with Android ADT under Windows
 * cd android_adt/jni
@@ -23,6 +24,23 @@
 * Get libkrkrz.so and libSDL3.so under android_adt/libs/arm64-v8a/libkrkrz.so and android_adt/libs/arm64-v8a/libSDL3.so
 * Use Android ADT to load android_adt/.project
 * Compile the apk file and install it to the Android device, **Now only support ARM64 Android device**   
+
+## (TODO, running **bad**) Xubuntu 25.04 in VMware
+* Refer to https://wiki.libsdl.org/SDL3/README-linux
+* sudo apt update
+* sudo apt install gcc g++ gedit git lftp make
+* sudo apt install libx11-dev libxext-dev libxrandr-dev libxcursor-dev libxfixes-dev libxi-dev libxss-dev libxkbcommon-dev
+* sudo apt install libegl-dev libegl1-mesa-dev libgles2-mesa-dev libgl1-mesa-dev libdrm-dev libgbm-dev 
+* sudo apt install libasound2-dev 
+* sudo apt install libonig-dev libglm-dev libfmt-dev libopusfile-dev libvorbis-dev libfreetype-dev libturbojpeg-dev libjpeg-dev
+* cd external/SDL3-f600c74
+* make clean
+* make -j8
+* make test
+* cd ../..
+* make clean
+* make -j8
+* ./krkrz
 
 ## (TODO, running **failed** in other linux and hardware) Ubuntu 25.04 on Xorg (choose when login) in VMware
 * sudo apt update

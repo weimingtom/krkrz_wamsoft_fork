@@ -457,9 +457,10 @@ all : $(BIN)
 ###SDL_test_font_mod.c
 ###SDL_test_log_mod.c 
 ###SDL_test_common_mod.c 
+###testgles2.c
 
 $(BIN) : $(LIBS)
-	$(CC) $(CFLAGS) -o $@ testgles2.c $(LIBS) -lpthread -ldl -lm $(LDFLAGS)
+	$(CC) $(CFLAGS) -o $@ triangle_claude.c $(LIBS) -lEGL -lGLESv2 -lpthread -ldl -lm $(LDFLAGS)
 	
 libSDL3.a : $(OBJECTS)
 	$(AR) $@ $(OBJECTS) 

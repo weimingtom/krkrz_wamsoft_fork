@@ -25,6 +25,7 @@ sudo apt-get install libaudio-dev libfribidi-dev libjack-dev libsndio-dev
 sudo apt-get install libdbus-1-dev libibus-1.0-dev libudev-dev libthai-dev
 
 ===
+sudo apt install gcc g++ gedit git lftp make
 
 sudo apt install libx11-dev libxext-dev libxrandr-dev libxcursor-dev libxfixes-dev libxi-dev libxss-dev libxkbcommon-dev
 sudo apt install libegl-dev libegl1-mesa-dev libgles2-mesa-dev libgl1-mesa-dev libdrm-dev libgbm-dev 
