@@ -25,7 +25,41 @@
 * Use Android ADT to load android_adt/.project
 * Compile the apk file and install it to the Android device, **Now only support ARM64 Android device**   
 
+## (TODO, running **bad**) Xubuntu 20.04 in VirtualBox
+* Refer to https://wiki.libsdl.org/SDL3/README-linux
+* sudo apt update
+* sudo apt install gcc g++ gedit git lftp make
+* sudo apt install libx11-dev libxext-dev libxrandr-dev libxcursor-dev libxfixes-dev libxi-dev libxss-dev libxkbcommon-dev
+* sudo apt install libegl-mesa0 libegl1 libegl-dev libegl1-mesa-dev libgles2-mesa-dev libgl1-mesa-dev libdrm-dev libgbm-dev
+* sudo apt install libasound2-dev 
+* sudo apt install libonig-dev libglm-dev libfmt-dev libopusfile-dev libvorbis-dev libfreetype-dev libturbojpeg-dev libjpeg-dev
+* cd external/SDL3-f600c74
+* make clean
+* make -j8
+* make test
+* cd ../..
+* make clean
+* make -j8
+* ./krkrz
+
 ## (TODO, running **bad**) Xubuntu 25.04 in VMware
+* Refer to https://wiki.libsdl.org/SDL3/README-linux
+* sudo apt update
+* sudo apt install gcc g++ gedit git lftp make
+* sudo apt install libx11-dev libxext-dev libxrandr-dev libxcursor-dev libxfixes-dev libxi-dev libxss-dev libxkbcommon-dev
+* sudo apt install libegl-dev libegl1-mesa-dev libgles2-mesa-dev libgl1-mesa-dev libdrm-dev libgbm-dev 
+* sudo apt install libasound2-dev 
+* sudo apt install libonig-dev libglm-dev libfmt-dev libopusfile-dev libvorbis-dev libfreetype-dev libturbojpeg-dev libjpeg-dev
+* cd external/SDL3-f600c74
+* make clean
+* make -j8
+* make test
+* cd ../..
+* make clean
+* make -j8
+* ./krkrz
+
+## (TODO, good) Ubuntu 25.04 (Wayland and X11) in VMware
 * Refer to https://wiki.libsdl.org/SDL3/README-linux
 * sudo apt update
 * sudo apt install gcc g++ gedit git lftp make

@@ -31,3 +31,8 @@ sudo apt install libx11-dev libxext-dev libxrandr-dev libxcursor-dev libxfixes-d
 sudo apt install libegl-dev libegl1-mesa-dev libgles2-mesa-dev libgl1-mesa-dev libdrm-dev libgbm-dev 
 sudo apt install libasound2-dev 
 
+(for xubuntu 20.04 64bit virtualbox)
+sudo apt install libegl-mesa0 libegl1 libegl-dev libegl1-mesa-dev libgles2-mesa-dev libgl1-mesa-dev libdrm-dev libgbm-dev 
+
+
+
