@@ -43,6 +43,20 @@
 * ./krkrz
 
 ## (TODO, running **bad**) Xubuntu 25.04 in VMware
+* Loading fonts order problem, need to exclude roboto-regular.ttf, see generic/environ/FontSystemBase.cpp
+```
+void TVPGetAllFontList( std::vector<tjs_string>& list ) 
+{
+...
+		for (auto it=fontList.begin();it != fontList.end(); it++) {
+#if !defined(ANDROID)
+			ttstr path(*it);
+			ttstr kkk = ttstr("file://./resource/roboto-regular.ttf");
+			if (path == kkk) { 
+				continue;
+			}
+#endif
+```
 * Refer to https://wiki.libsdl.org/SDL3/README-linux
 * sudo apt update
 * sudo apt install gcc g++ gedit git lftp make
@@ -76,7 +90,7 @@
 * make -j8
 * ./krkrz
 
-## (TODO, running **failed** in other linux and hardware) Ubuntu 25.04 on Xorg (choose when login) in VMware
+## (Don't use this, just record, running **failed** in other linux and hardware) Ubuntu 25.04 on Xorg (choose when login) in VMware
 * sudo apt update
 * sudo apt install gedit lftp make gcc g++
 * sudo apt install libdbus-1-dev libudev-dev libx11-dev libgles-dev libwayland-dev libxkbcommon-dev libxext-dev libxcursor-dev libxi-dev libxrandr-dev libxss-dev libpulse-dev libasound2-dev

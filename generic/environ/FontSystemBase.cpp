@@ -47,6 +47,13 @@ void TVPGetAllFontList( std::vector<tjs_string>& list )
 		} lister(fontList, Application->ResourcePath());
 		TVPGetStorageListAt(Application->ResourcePath(), &lister);
 		for (auto it=fontList.begin();it != fontList.end(); it++) {
+#if !defined(ANDROID)
+			ttstr path(*it);
+			ttstr kkk = ttstr("file://./resource/roboto-regular.ttf");
+			if (path == kkk) { 
+				continue;
+			}
+#endif
 			TVPAddSystemFontToFreeType(*it, &list);
 		}
 		TVPIsGetAllFontList = true;

@@ -1,0 +1,52 @@
+(gdb) bt
+#0  EntryStorageCache (name=...) at common/base/StorageCache.cpp:164
+#1  0x00005555557510bb in TVPGetStorageCache (_name=..., entry=true)
+    at common/base/StorageCache.cpp:204
+#2  0x000055555578e2e7 in OpenFontFile (
+    path=u"file://./resource/roboto-regular.ttf")
+    at common/visual/FreeType.cpp:79
+#3  0x000055555578f39a in tTVPFreeTypeFaceList::LoadSystemFont (
+    this=0x55555601a390, path=u"file://./resource/roboto-regular.ttf", 
+    faces=0x7fffffffd550) at common/visual/FreeType.cpp:389
+#4  0x000055555578e67f in TVPAddSystemFontToFreeType (
+    storage=u"file://./resource/roboto-regular.ttf", faces=0x7fffffffd550)
+    at common/visual/FreeType.cpp:221
+#5  0x0000555555853c0e in TVPGetAllFontList (
+    list=std::vector of length 0, capacity 0)
+    at generic/environ/FontSystemBase.cpp:50
+#6  0x0000555555853d1b in SelectFont (
+    faces=std::vector of length 6, capacity 6 = {...}, face=u"")
+    at generic/environ/FontSystemBase.cpp:60
+#7  0x000055555585419e in TVPGetDefaultFontName ()
+    at generic/environ/FontSystemBase.cpp:90
+#8  0x0000555555854aba in TVPGetDefaultFaceNames ()
+--Type <RET> for more, q to quit, c to continue without paging--
+    at generic/environ/FontSystemBase.cpp:128
+#9  0x000055555578cb98 in FontSystem::ConstructDefaultFont (this=0x555556046970) at common/visual/FontSystem.cpp:53
+#10 0x000055555578caff in FontSystem::FontSystem (this=0x555556046970) at common/visual/FontSystem.cpp:44
+#11 0x00005555555bfc61 in TVPInializeFontRasterizers () at common/visual/LayerBitmapImpl.cpp:87
+#12 0x00005555557d5eb6 in TVPCreateNativeClass_Font () at common/visual/LayerIntf.cpp:10349
+#13 0x000055555573098f in TVPInitScriptEngine () at common/base/ScriptMgnIntf.cpp:210
+#14 0x00005555555a27e4 in TVPSystemInit () at common/base/SysInitIntf.cpp:51
+#15 0x0000555555630235 in tTVPApplication::InitializeApplication (this=0x5555560050b0) at generic/environ/Application.cpp:208
+#16 0x00005555555a033e in SDL_AppInit (appstate=0x555555f090d8 <SDL_main_appstate>, argc=1, argv=0x7fffffffde68) at sdl3/environ/main.cpp:239
+#17 0x0000555555b4a7b6 in SDL_InitMainCallbacks (argc=1, argv=0x7fffffffde68, appinit=0x5555555a004b <SDL_AppInit(void**, int, char**)>, 
+    appiter=0x5555555a04f6 <SDL_AppIterate(void*)>, appevent=0x55555559fc32 <SDL_AppEvent(void*, SDL_Event*)>, 
+    appquit=0x5555555a0470 <SDL_AppQuit(void*, SDL_AppResult)>) at src/main/SDL_main_callbacks.c:104
+#18 0x0000555555b1df0f in SDL_EnterAppMainCallbacks_REAL (argc=1, argv=0x7fffffffde68, appinit=0x5555555a004b <SDL_AppInit(void**, int, char**)>, 
+    appiter=0x5555555a04f6 <SDL_AppIterate(void*)>, appevent=0x55555559fc32 <SDL_AppEvent(void*, SDL_Event*)>, 
+    appquit=0x5555555a0470 <SDL_AppQuit(void*, SDL_AppResult)>) at src/main/generic/SDL_sysmain_callbacks.c:56
+#19 0x0000555555951038 in SDL_EnterAppMainCallbacks (a=1, b=0x7fffffffde68, c=0x5555555a004b <SDL_AppInit(void**, int, char**)>, 
+    d=0x5555555a04f6 <SDL_AppIterate(void*)>, e=0x55555559fc32 <SDL_AppEvent(void*, SDL_Event*)>, f=0x5555555a0470 <SDL_AppQuit(void*, SDL_AppResult)>)
+    at src/dynapi/SDL_dynapi_procs.h:207
+#20 0x000055555559f980 in SDL_main (argc=1, argv=0x7fffffffde68) at external/SDL3-f600c74/include/SDL3/SDL_main_impl.h:59
+#21 0x0000555555b4a99b in SDL_CallMainFunction (argc=1, argv=0x7fffffffde68, mainFunction=0x55555559f93a <SDL_main(int, char**)>)
+    at src/main/SDL_main_callbacks.c:164
+#22 0x000055555599b48b in SDL_RunApp_REAL (argc=1, argv=0x7fffffffde68, mainFunction=0x55555559f93a <SDL_main(int, char**)>, reserved=0x0)
+    at src/main/SDL_runapp.c:37
+#23 0x0000555555948237 in SDL_RunApp_DEFAULT (a=1, b=0x7fffffffde68, c=0x55555559f93a <SDL_main(int, char**)>, d=0x0) at src/dynapi/SDL_dynapi_procs.h:804
+#24 0x0000555555956a01 in SDL_RunApp (a=1, b=0x7fffffffde68, c=0x55555559f93a <SDL_main(int, char**)>, d=0x0) at src/dynapi/SDL_dynapi_procs.h:804
+#25 0x000055555559f9af in main (argc=1, argv=0x7fffffffde68) at external/SDL3-f600c74/include/SDL3/SDL_main_impl.h:137
+(gdb) 
+
+
