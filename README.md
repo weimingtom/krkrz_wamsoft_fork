@@ -43,6 +43,7 @@
 * ./krkrz
 
 ## (TODO, running **bad**) Xubuntu 25.04 in VMware
+* **Note**, in my modification linux build version, resource files are not embedded into the elf file.    
 * Loading fonts order problem, need to exclude roboto-regular.ttf, see generic/environ/FontSystemBase.cpp
 ```
 void TVPGetAllFontList( std::vector<tjs_string>& list ) 
@@ -198,6 +199,15 @@ wamsoft/krkrz研究。我已经把我的分支代码放到gh上，名字叫krkrz
 理论上可以改成支持gbk，但目前似乎只支持unicode，我以后再想办法修改
 （简单说就是我现在懒得改了）。我打算这几天顺便把我另外一个krkrz的研究
 代码也放到gh上，看情况，如果能整理出来的话 ​​​
+
+2026/4/22
+wamsoft/krkrz研究。我去，我好像查到为什么大部分Linux都无法正确显示字体，
+唯独ubuntu 25.04可以正常显示字体——因为它们的区别在于搜索（或者说是缓存）
+resource目录字体文件的次序不一样。如果是ubuntu25，
+会优先缓存natosansjp-regular字体（这个otf字体较大），但其他linux会优先缓存
+roboto-regular.ttf，这个字体很小，所以如果缓存到文件大小较小的字体时，
+显示日文就会失败。只要移除roboto-regular.ttf文件，这个bug就会消失。
+我想想能不能通过修改代码而不需要删除roboto-regular.ttf
 ```
 
 # Original README
